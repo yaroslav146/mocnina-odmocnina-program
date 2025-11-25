@@ -1,12 +1,16 @@
 ﻿Console.ForegroundColor = ConsoleColor.Green;
-Console.WriteLine("---- Mocnina -----");
+Console.WriteLine("\t ---- Mocnina -----");
 Console.ForegroundColor = ConsoleColor.White;
 bool zkouska1;
+float mocnina = 0;
+float odmocnina = 0;
+float reseni1 = 0;
+double reseni2 = 0;
 
 do
 {
     Console.Write("Zadejte číslo, ze kterého se spočítá třetí mocnina: ");
-    if (float.TryParse(Console.ReadLine(), out float mocnina) == false)
+    if (float.TryParse(Console.ReadLine(), out mocnina) == false)
     {
         zkouska1 = false;
         Console.WriteLine("Špatně zadáne číslo. Zkus ještě jednou.");
@@ -15,7 +19,7 @@ do
     {
         zkouska1 = true;
         Console.WriteLine("Toto číslo se nyní třikrát umocní.");
-        float reseni1 = mocnina*mocnina*mocnina;
+        reseni1 = mocnina*mocnina*mocnina;
         Console.Write($"Třetí mocnina z čísla ");
         Console.ForegroundColor = ConsoleColor.Red;
         Console.Write(mocnina);
@@ -30,13 +34,13 @@ do
 
 
 Console.ForegroundColor = ConsoleColor.Green;
-Console.WriteLine("---- Odmocnina -----");
+Console.WriteLine("\t ---- Odmocnina -----");
 Console.ForegroundColor = ConsoleColor.White;
 bool zkouska2;
 do
 {
     Console.Write("Zadejte číslo, ze kterého se spočítá odmocnina: ");
-    if (float.TryParse(Console.ReadLine(), out float odmocnina) == false || odmocnina < 0)
+    if (float.TryParse(Console.ReadLine(), out odmocnina) == false || odmocnina < 0)
     {
         zkouska2 = false;
         Console.WriteLine("Špatně zadáne číslo. Zkus ještě jednou.");
@@ -45,7 +49,7 @@ do
     {
         zkouska2 = true;
         Console.WriteLine("Toto číslo je větší, než nula a bude odmocněno.");
-        double reseni2 = Math.Sqrt(odmocnina);
+        reseni2 = Math.Sqrt(odmocnina);
         Console.Write($"Odmocnina z čísla ");
         Console.ForegroundColor = ConsoleColor.Red;
         Console.Write(odmocnina);
@@ -58,3 +62,9 @@ do
     }
 } while (zkouska2 == false);
 Console.WriteLine();
+Console.ForegroundColor = ConsoleColor.Green;
+Console.WriteLine("\t-----Přehledná tabulka-----");
+Console.ForegroundColor = ConsoleColor.White;
+Console.WriteLine("\t\t| číslo \t| výsledek ");
+Console.WriteLine($"Mocnina \t| {mocnina} \t\t| {reseni1}");
+Console.WriteLine($"Odmocnina \t| {odmocnina} \t\t| {reseni2}");
