@@ -57,4 +57,3 @@ do
         Console.WriteLine();
     }
 } while (zkouska2 == false);
-Console.WriteLine("sofjaf");
