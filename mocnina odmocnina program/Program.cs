@@ -68,3 +68,4 @@ Console.ForegroundColor = ConsoleColor.White;
 Console.WriteLine("\t\t| číslo \t| výsledek ");
 Console.WriteLine($"Mocnina \t| {mocnina} \t\t| {reseni1}");
 Console.WriteLine($"Odmocnina \t| {odmocnina} \t\t| {reseni2}");
+Console.WriteLine();
