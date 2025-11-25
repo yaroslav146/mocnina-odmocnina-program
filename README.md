@@ -1,0 +1,1 @@
+# mocnina odmocnina program
