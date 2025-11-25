@@ -56,4 +56,4 @@ do
         Console.ForegroundColor = ConsoleColor.White;
         Console.WriteLine();
     }
-} while (zkouska1 == false);
+} while (zkouska2 == false);
