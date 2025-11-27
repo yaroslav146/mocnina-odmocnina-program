@@ -1,4 +1,4 @@
-﻿Console.ForegroundColor = ConsoleColor.Green;
+Console.ForegroundColor = ConsoleColor.Green;
 Console.WriteLine("\t ---- Mocnina -----");
 Console.ForegroundColor = ConsoleColor.White;
 bool zkouska1;
@@ -13,13 +13,15 @@ do
     if (float.TryParse(Console.ReadLine(), out mocnina) == false)
     {
         zkouska1 = false;
+        Console.ForegroundColor = ConsoleColor.DarkRed;
         Console.WriteLine("Špatně zadáne číslo. Zkus ještě jednou.");
+        Console.ForegroundColor = ConsoleColor.White;
     }
     else
     {
         zkouska1 = true;
         Console.WriteLine("Toto číslo se nyní třikrát umocní.");
-        reseni1 = mocnina*mocnina*mocnina;
+        reseni1 = mocnina * mocnina * mocnina;
         Console.Write($"Třetí mocnina z čísla ");
         Console.ForegroundColor = ConsoleColor.Red;
         Console.Write(mocnina);
@@ -43,7 +45,9 @@ do
     if (float.TryParse(Console.ReadLine(), out odmocnina) == false || odmocnina < 0)
     {
         zkouska2 = false;
+        Console.ForegroundColor = ConsoleColor.DarkRed;
         Console.WriteLine("Špatně zadáne číslo. Zkus ještě jednou.");
+        Console.ForegroundColor = ConsoleColor.White;
     }
     else
     {
