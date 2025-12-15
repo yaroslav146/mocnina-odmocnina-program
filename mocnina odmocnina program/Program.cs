@@ -1,4 +1,4 @@
-Console.ForegroundColor = ConsoleColor.Green;
+﻿Console.ForegroundColor = ConsoleColor.Green;
 Console.WriteLine("\t ---- Mocnina -----");
 Console.ForegroundColor = ConsoleColor.White;
 bool zkouska1;
@@ -10,6 +10,7 @@ double reseni2 = 0;
 do
 {
     Console.Write("Zadejte číslo, ze kterého se spočítá třetí mocnina: ");
+    Console.ForegroundColor = ConsoleColor.Green;
     if (float.TryParse(Console.ReadLine(), out mocnina) == false)
     {
         zkouska1 = false;
@@ -19,11 +20,12 @@ do
     }
     else
     {
+        Console.ForegroundColor = ConsoleColor.White;
         zkouska1 = true;
         Console.WriteLine("Toto číslo se nyní třikrát umocní.");
         reseni1 = mocnina * mocnina * mocnina;
         Console.Write($"Třetí mocnina z čísla ");
-        Console.ForegroundColor = ConsoleColor.Red;
+        Console.ForegroundColor = ConsoleColor.Yellow;
         Console.Write(mocnina);
         Console.ForegroundColor = ConsoleColor.White;
         Console.Write(" je ");
@@ -42,6 +44,7 @@ bool zkouska2;
 do
 {
     Console.Write("Zadejte číslo, ze kterého se spočítá odmocnina: ");
+    Console.ForegroundColor = ConsoleColor.Green;
     if (float.TryParse(Console.ReadLine(), out odmocnina) == false || odmocnina < 0)
     {
         zkouska2 = false;
@@ -51,11 +54,12 @@ do
     }
     else
     {
+        Console.ForegroundColor = ConsoleColor.White;
         zkouska2 = true;
         Console.WriteLine("Toto číslo je větší, než nula a bude odmocněno.");
         reseni2 = Math.Sqrt(odmocnina);
         Console.Write($"Odmocnina z čísla ");
-        Console.ForegroundColor = ConsoleColor.Red;
+        Console.ForegroundColor = ConsoleColor.Yellow;
         Console.Write(odmocnina);
         Console.ForegroundColor = ConsoleColor.White;
         Console.Write(" je ");
